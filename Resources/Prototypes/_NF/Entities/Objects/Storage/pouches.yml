@@ -59,6 +59,9 @@
   parent: NFPouchBase
   name: utility pouch
   components:
+  - type: Tag
+    tags:
+    - SmallBox
   - type: Sprite
     layers:
     - state: base
@@ -131,6 +134,13 @@
   parent: NFPouchUtility
   name: contractor's pouch
   components:
+  - type: Tag
+    tags:
+    - LargeBox
+  - type: Storage
+    maxItemSize: Large
+    grid:
+    - 0,0,11,5
   - type: Sprite
     layers:
     - state: base
@@ -290,6 +300,13 @@
   parent: NFPouchUtility
   name: engineer's pouch
   components:
+  - type: Tag
+    tags:
+    - MediumBox
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,5,3
   - type: Sprite
     layers:
     - state: base

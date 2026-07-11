@@ -78,3 +78,60 @@
   - type: Construction
     graph: NFGoblinMadeClothingBackpackTrashBlue
     node: NFGoblinMadeClothingBackpackTrashBlue
+
+- type: entity
+  parent: NFClothingBackpack # Frontier: ClothingBackpack<NFClothingBackpack
+  id: ClothingBackpackRack
+  name: backpack TEST
+  description: You wear this on your back and put items into it.
+  components:
+  - type: ItemSlots
+    slots:
+      # Large Box Racks
+      Large_Box_slot1: &LargeBoxSlot
+        name: blackpack-slot-component-slot-name-large-Box
+        whitelist:
+          tags:
+            - LargeBox
+        priority: 2
+      Large_Box_slot2: *LargeBoxSlot
+      Large_Box_slot3: *LargeBoxSlot
+      # Medium Box Racks
+      Medium_Box_slot1: &MediumBoxSlot
+        name: blackpack-slot-component-slot-name-Medium-Box
+        whitelist:
+          tags:
+            - MediumBox
+        priority: 3
+      Medium_Box_slot2: *MediumBoxSlot
+      Medium_Box_slot3: *MediumBoxSlot
+      # Small Box Racks
+      Small_Box_slot1: &SmallBoxSlot
+        name: blackpack-slot-component-slot-name-Small-Box
+        whitelist:
+          tags:
+            - SmallBox
+        priority: 4
+      Small_Box_slot2: *SmallBoxSlot
+      Small_Box_slot3: *SmallBoxSlot
+      # Toolbox Hanging off the side
+      Toolbox_Slot:
+        name: blackpack-slot-component-slot-name-toolbox
+        whitelist:
+          tags:
+            - Toolbox
+        priority: 5
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+      Large_Box_slot1: !type:ContainerSlot {}
+      Large_Box_slot2: !type:ContainerSlot {}
+      Large_Box_slot3: !type:ContainerSlot {}
+      Medium_Box_slot1: !type:ContainerSlot {}
+      Medium_Box_slot2: !type:ContainerSlot {}
+      Medium_Box_slot3: !type:ContainerSlot {}
+      Small_Box_slot1: !type:ContainerSlot {}
+      Small_Box_slot2: !type:ContainerSlot {}
+      Small_Box_slot3: !type:ContainerSlot {}
+      Toolbox_Slot: !type:ContainerSlot {}
