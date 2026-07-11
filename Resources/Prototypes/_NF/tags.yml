@@ -103,6 +103,15 @@
   id: LavaMercenary
 
 - type: Tag
+  id: LargeBox
+
+- type: Tag
+  id: MediumBox
+
+- type: tag
+  id: SmallBox
+
+- type: Tag
   id: MysteryFigureBox
 
 - type: Tag
